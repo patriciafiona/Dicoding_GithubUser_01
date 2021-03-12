@@ -15,6 +15,13 @@
     <string name="follower">Followers</string>
     <string name="following">Followings</string>
     <string name="popular">Popular</string>
+    <string name="temp_repo_name">Repo Name</string>
+    <string name="temp_repo_detail">Repository Details here</string>
+    <string name="temp_number">0</string>
+    <string name="temp_category_name">Category Name</string>
+    <string name="repositories">Repositories</string>
+    <string name="organizations">Organizations</string>
+    <string name="starred">Starred</string>
 
     <!-- Other string resources-->
     <string-array name="username">
@@ -71,6 +78,20 @@
         <item>1064</item>
         <item>65</item>
         <item>37</item>
+    </string-array>
+
+    <string-array name="starred">
+        <item>19</item>
+        <item>8</item>
+        <item>6</item>
+        <item>20</item>
+        <item>18</item>
+        <item>12</item>
+        <item>9</item>
+        <item>11</item>
+        <item>33</item>
+        <item>22</item>
+        <item>7</item>
     </string-array>
 
     <string-array name="company">

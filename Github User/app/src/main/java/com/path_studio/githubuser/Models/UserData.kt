@@ -14,6 +14,7 @@ object UserData {
         val dataFollower = resources.getStringArray(R.array.followers)
         val dataFollowing = resources.getStringArray(R.array.following)
         val dataAvatar = resources.getStringArray(R.array.avatar)
+        val dataStarred = resources.getStringArray(R.array.starred)
 
         val listUsers = ArrayList<User>()
         for (position in dataName.indices) {
@@ -22,6 +23,7 @@ object UserData {
                 dataName[position],
                 dataLocation[position],
                 dataRepository[position].toInt(),
+                dataStarred[position].toInt(),
                 dataCompany[position],
                 dataLink[position],
                 dataFollower[position].toInt(),

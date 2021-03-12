@@ -1,0 +1,226 @@
+[
+	{
+		"username": "JakeWharton",
+		"repo_name": "android-advancedrecyclerview",
+		"repo_detail": "RecyclerView extension library which provides advanced features. (ex. Google's Inbox app like swiping, Play Music app like drag and drop sorting)",
+		"repo_category": "Java",
+		"favorite": 5100
+	},
+	{
+		"username": "amitshekhariitbhu",
+		"repo_name": "AestheticDialogs",
+		"repo_detail": "📱 An Android Library for 💫fluid, 😍beautiful, 🎨custom Dialogs.",
+		"repo_category": "Kotlin",
+		"favorite": 348
+	},
+	{
+		"username": "romainguy",
+		"repo_name": "MaterialSearchView",
+		"repo_detail": "Android Search View based on Material design guidelines.",
+		"repo_category": "Kotlin",
+		"favorite": 988
+	},
+	{
+		"username": "JakeWharton",
+		"repo_name": "SearchableSpinner",
+		"repo_detail": "Spinner with searchable items.",
+		"repo_category": "Java",
+		"favorite": 580
+	},
+	{
+		"username": "chrisbanes",
+		"repo_name": "RichPath",
+		"repo_detail": "💪 Rich Android Path. 🤡 Draw as you want. 🎉 Animate much as you can.",
+		"repo_category": "Kotlin",
+		"favorite": 2237
+	},
+	{
+		"username": "jasoet",
+		"repo_name": "TapTargetView",
+		"repo_detail": "An implementation of tap targets from the Material Design guidelines for feature discovery.",
+		"repo_category": "Java",
+		"favorite": 5829
+	},
+	{
+		"username": "jasoet",
+		"repo_name": "MaterialSearchView",
+		"repo_detail": "Cute library to implement SearchView in a Material Design Approach",
+		"repo_category": "java",
+		"favorite": 3816
+	},
+	{
+		"username": "chrisbanes",
+		"repo_name": "MaterialScrollBar",
+		"repo_detail": "An Android library that brings the Material Design 5.1 sidebar to pre-5.1 devices.",
+		"repo_category": "Java",
+		"favorite": 758
+	},
+	{
+		"username": "tipsy",
+		"repo_name": "MaterialStyledDialogs",
+		"repo_detail": "A library that shows a beautiful and customizable Material-based dialog with header. API 14+ required.",
+		"repo_category": "Kotlin",
+		"favorite": 1134
+	},
+	{
+		"username": "JakeWharton",
+		"repo_name": "android-stepper",
+		"repo_detail": "A library for creating a wizard-like step-through user interface that uses navigation components and menus for displaying steps with advanced customization.",
+		"repo_category": "Kotlin",
+		"favorite": 76
+	},
+	{
+		"username": "budioktaviyan",
+		"repo_name": "bloc",
+		"repo_detail": "A predictable state management library that helps implement the BLoC design pattern",
+		"repo_category": "Dart",
+		"favorite": 6735
+	},
+	{
+		"username": "budioktaviyan",
+		"repo_name": "equatable",
+		"repo_detail": "A Dart package that helps to implement value based equality without needing to explicitly override == and hashCode.",
+		"repo_category": "Dart",
+		"favorite": 488
+	},
+	{
+		"username": "tipsy",
+		"repo_name": "flutter",
+		"repo_detail": "Flutter makes it easy and fast to build beautiful mobile apps.",
+		"repo_category": "Dart",
+		"favorite": 3
+	},
+	{
+		"username": "tipsy",
+		"repo_name": "laravel-debugbar",
+		"repo_detail": "Laravel Debugbar (Integrates PHP Debug Bar)",
+		"repo_category": "PHP",
+		"favorite": 12386
+	},
+	{
+		"username": "tipsy",
+		"repo_name": "laravel-ide-helper",
+		"repo_detail": "Laravel IDE Helper",
+		"repo_category": "PHP",
+		"favorite": 11173
+	},
+	{
+		"username": "ravi8x",
+		"repo_name": "laravel-cors",
+		"repo_detail": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application",
+		"repo_category": "JavaScript",
+		"favorite": 5629
+	},
+	{
+		"username": "",
+		"repo_name": "laravel-telescope-toolbar",
+		"repo_detail": "A toolbar for Laravel Telescope, based on the Symfony Web Profiler.",
+		"repo_category": "PHP",
+		"favorite": 578
+	},
+	{
+		"username": "ravi8x",
+		"repo_name": "Internship-LMS-FrontEND",
+		"repo_detail": "We are in the mission of solving a crisis for a lot of small and medium enterprises, who are trying to recruit interns for their projects. ",
+		"repo_category": "JavaScript",
+		"favorite": 152
+	},
+	{
+		"username": "budioktaviyan",
+		"repo_name": "librdkafka",
+		"repo_detail": "The Apache Kafka C/C++ library",
+		"repo_category": "C",
+		"favorite": 5829
+	},
+	{
+		"username": "hendisantika",
+		"repo_name": "kafkacat",
+		"repo_detail": "Generic command line non-JVM Apache Kafka producer and consumer",
+		"repo_category": "C",
+		"favorite": 3281
+	},
+	{
+		"username": "amitshekhariitbhu",
+		"repo_name": "librd",
+		"repo_detail": "Rapid Development C utility library",
+		"repo_category": "C",
+		"favorite": 112
+	},
+	{
+		"username": "ravi8x",
+		"repo_name": "mklove",
+		"repo_detail": "mklove - not autoconf",
+		"repo_category": "Shell",
+		"favorite": 41
+	},
+	{
+		"username": "amitshekhariitbhu",
+		"repo_name": "trivup",
+		"repo_detail": "Trivially Up a cluster of applications (such as a Kafka cluster!)",
+		"repo_category": "Python",
+		"favorite": 31
+	},
+	{
+		"username": "ravi8x",
+		"repo_name": "rdkafka-python",
+		"repo_detail": "Sample CFFI integration between librdkafka and Python. See https://bitbucket.org/yungchin/python-librdkafka for a proper implementation",
+		"repo_category": "Python",
+		"favorite": 9
+	},
+	{
+		"username": "sidiqpermana",
+		"repo_name": "outline",
+		"repo_detail": "The fastest wiki and knowledge base for growing teams. Beautiful, feature rich, and markdown compatible.",
+		"repo_category": "JavaScript",
+		"favorite": 11847
+	},
+	{
+		"username": "sidiqpermana",
+		"repo_name": "tinycon",
+		"repo_detail": "A small library for manipulating the favicon, in particular adding alert bubbles and changing images.",
+		"repo_category": "JavaScript",
+		"favorite": 4902
+	},
+	{
+		"username": "sidiqpermana",
+		"repo_name": "electron-panel-window",
+		"repo_detail": "Enables creating a browser window in Electron that behaves like an NSPanel.",
+		"repo_category": "C++",
+		"favorite": 40
+	},
+	{
+		"username": "patriciafiona",
+		"repo_name": "project_se",
+		"repo_detail": "Project One Medical - Software Engineering Kalbis Institute",
+		"repo_category": "HTML",
+		"favorite": 1
+	},
+	{
+		"username": "patriciafiona",
+		"repo_name": "Belajar-Dicoding",
+		"repo_detail": "Simpanan arsip hasil belajar dicoding",
+		"repo_category": "CSS",
+		"favorite": 1
+	},
+	{
+		"username": "patriciafiona",
+		"repo_name": "Nike-Laravel-and-Express",
+		"repo_detail": "Mencoba membuat proyek Fullstack - Nike App",
+		"repo_category": "PHP",
+		"favorite": 1
+	},
+	{
+		"username": "patriciafiona",
+		"repo_name": "Dicoding_Challenge_VisualisasiData",
+		"repo_detail": "Ikut Challenge visualisasi di data Dicoding",
+		"repo_category": "JavaScript",
+		"favorite": 1
+	},
+	{
+		"username": "patriciafiona",
+		"repo_name": "Dicoding_BStore",
+		"repo_detail": "Result of Renew my Dicoding: \" Belajar Membuat Aplikasi Android untuk Pemula\" Certificate (Submission Result)",
+		"repo_category": "Kotlin",
+		"favorite": 1
+	}
+]

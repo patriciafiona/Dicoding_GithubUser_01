@@ -8,6 +8,7 @@ data class User (
     var name: String?,
     var location: String?,
     var repository: Int,
+    var starred: Int,
     var company: String?,
     var link: String?,
     var followers: Int,
@@ -18,6 +19,7 @@ data class User (
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
+        parcel.readInt(),
         parcel.readInt(),
         parcel.readString(),
         parcel.readString(),
@@ -32,6 +34,7 @@ data class User (
         parcel.writeString(name)
         parcel.writeString(location)
         parcel.writeInt(repository)
+        parcel.writeInt(starred)
         parcel.writeString(company)
         parcel.writeString(link)
         parcel.writeInt(followers)

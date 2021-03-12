@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- My Github Detail -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,21 +131,35 @@
                     <TextView
                         android:id="@+id/textView"
                         style="@style/DetailFollowTxt"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
                         android:text="@string/follower"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView3"
                         app:layout_constraintStart_toEndOf="@+id/myFollowers"
                         app:layout_constraintTop_toBottomOf="@+id/myLink"
                         app:layout_constraintWidth_percent="0.2" />
 
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/ic_baseline_dot_grey_10"
+                        app:layout_constraintEnd_toStartOf="@+id/myFollowings"
+                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        app:layout_constraintTop_toBottomOf="@+id/myLink" />
+
                     <TextView
                         android:id="@+id/myFollowings"
                         style="@style/DetailFollowNumber"
-                        android:layout_marginLeft="10dp"
-                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
                         app:layout_constraintTop_toBottomOf="@+id/myLink" />
 
                     <TextView
                         android:id="@+id/textView2"
                         style="@style/DetailFollowTxt"
+                        android:layout_marginStart="5dp"
                         android:text="@string/following"
                         app:layout_constraintStart_toEndOf="@+id/myFollowings"
                         app:layout_constraintTop_toBottomOf="@+id/myLink"
@@ -154,6 +169,7 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!-- Popular and Other Section -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -172,6 +188,108 @@
                         android:textSize="18sp"
                         android:textColor="@color/black"
                         android:textStyle="bold"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_popular_repo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_col_popular_repository" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            style="@style/PopularDetailImg"
+                            app:layout_constraintWidth_percent="0.075"
+                            android:background="@color/grey_900"
+                            android:src="@drawable/ic_baseline_book_white_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:text="@string/repositories"
+                            style="@style/PopularDetailText"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.8" />
+
+                        <TextView
+                            android:id="@+id/myRepository"
+                            style="@style/PopularDetailNum"
+                            android:text="@string/temp_number"
+                            app:layout_constraintStart_toEndOf="@+id/textView3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.1" />
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            style="@style/PopularDetailImg"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/orange_700"
+                            android:src="@drawable/ic_baseline_business_white_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                            app:layout_constraintWidth_percent="0.075" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            style="@style/PopularDetailText"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/organizations"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintWidth_percent="0.8" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            style="@style/PopularDetailNum"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/temp_number"
+                            app:layout_constraintStart_toEndOf="@+id/textView3"
+                            app:layout_constraintTop_toBottomOf="@+id/myRepository"
+                            app:layout_constraintWidth_percent="0.1" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            style="@style/PopularDetailImg"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/yellow"
+                            android:src="@drawable/ic_baseline_star_border_white_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                            app:layout_constraintWidth_percent="0.075" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            style="@style/PopularDetailText"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/starred"
+                            app:layout_constraintStart_toEndOf="@+id/imageView5"
+                            app:layout_constraintTop_toBottomOf="@+id/textView4"
+                            app:layout_constraintWidth_percent="0.8" />
+
+                        <TextView
+                            android:id="@+id/myStarred"
+                            style="@style/PopularDetailNum"
+                            android:text="@string/temp_number"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintStart_toEndOf="@+id/textView4"
+                            app:layout_constraintTop_toBottomOf="@+id/textView6"
+                            app:layout_constraintWidth_percent="0.1" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
 
