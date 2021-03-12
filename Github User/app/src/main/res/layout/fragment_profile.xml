@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200"
+    tools:context=".Fragments.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="20dp"
+                    android:paddingHorizontal="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/myAvatar"
+                        style="@style/ItemRowAvatar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/myName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/temp_name"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/myAvatar"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.7" />
+
+                    <TextView
+                        android:id="@+id/myUsername"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/temp_username"
+                        android:textColor="@color/grey_700"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/myAvatar"
+                        app:layout_constraintTop_toBottomOf="@+id/myName"
+                        app:layout_constraintWidth_percent="0.7" />
+
+                    <ImageView
+                        android:id="@+id/icon_d_01"
+                        style="@style/DetailUserIcon"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_baseline_business_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/myUsername" />
+
+                    <TextView
+                        android:id="@+id/myCompany"
+                        style="@style/DetailUserTxt"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/temp_company"
+                        app:layout_constraintStart_toEndOf="@+id/icon_d_01"
+                        app:layout_constraintTop_toBottomOf="@+id/myUsername" />
+
+                    <ImageView
+                        android:id="@+id/icon_d_02"
+                        style="@style/DetailUserIcon"
+                        android:src="@drawable/ic_baseline_location_on_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/icon_d_01" />
+
+                    <TextView
+                        android:id="@+id/myLocation"
+                        style="@style/DetailUserTxt"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/temp_location"
+                        app:layout_constraintStart_toEndOf="@+id/icon_d_02"
+                        app:layout_constraintTop_toBottomOf="@+id/myCompany" />
+
+                    <ImageView
+                        android:id="@+id/icon_d_03"
+                        style="@style/DetailUserIcon"
+                        android:src="@drawable/ic_baseline_link_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/icon_d_02" />
+
+                    <TextView
+                        android:id="@+id/myLink"
+                        style="@style/DetailUserTxt"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/temp_link"
+                        android:autoLink="web"
+                        app:layout_constraintStart_toEndOf="@+id/icon_d_03"
+                        app:layout_constraintTop_toBottomOf="@+id/myLocation" />
+
+                    <ImageView
+                        android:id="@+id/icon_d_04"
+                        style="@style/DetailUserIcon"
+                        android:src="@drawable/ic_baseline_person_outline_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/icon_d_03" />
+
+                    <TextView
+                        android:id="@+id/myFollowers"
+                        style="@style/DetailFollowNumber"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/icon_d_04"
+                        app:layout_constraintTop_toBottomOf="@+id/myLink" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/DetailFollowTxt"
+                        android:text="@string/follower"
+                        app:layout_constraintStart_toEndOf="@+id/myFollowers"
+                        app:layout_constraintTop_toBottomOf="@+id/myLink"
+                        app:layout_constraintWidth_percent="0.2" />
+
+                    <TextView
+                        android:id="@+id/myFollowings"
+                        style="@style/DetailFollowNumber"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        app:layout_constraintTop_toBottomOf="@+id/myLink" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/DetailFollowTxt"
+                        android:text="@string/following"
+                        app:layout_constraintStart_toEndOf="@+id/myFollowings"
+                        app:layout_constraintTop_toBottomOf="@+id/myLink"
+                        app:layout_constraintWidth_percent="0.2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/popular"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
