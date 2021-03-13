@@ -6,7 +6,10 @@
     android:padding="5dp"
     android:orientation="vertical"
     android:background="@drawable/rounded_layout"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

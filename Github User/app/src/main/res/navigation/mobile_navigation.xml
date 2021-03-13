@@ -11,9 +11,9 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/navigation_list_users"
-        android:name="com.path_studio.githubuser.Fragments.ListUserFragment"
+        android:name="com.path_studio.githubuser.Fragments.ExploreFragment"
         android:label="fragment_list_user"
-        tools:layout="@layout/fragment_list_user" />
+        tools:layout="@layout/fragment_explore" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.path_studio.githubuser.Fragments.ProfileFragment"

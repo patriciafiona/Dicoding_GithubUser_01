@@ -22,6 +22,9 @@
     <string name="repositories">Repositories</string>
     <string name="organizations">Organizations</string>
     <string name="starred">Starred</string>
+    <string name="explore">Explore</string>
+    <string name="all_users">All Users</string>
+    <string name="discover">Discover</string>
 
     <!-- Other string resources-->
     <string-array name="username">
@@ -162,6 +165,20 @@
         <item>@drawable/user9</item>
         <item>@drawable/user10</item>
         <item>@drawable/patriciafiona</item>
+    </string-array>
+
+    <string-array name="background">
+        <item>https://cdn.dribbble.com/users/1456628/screenshots/10864000/media/764d5c1b4ead8a379c826bfca47edfed.png?compress=1&amp;resize=1000x750</item>
+        <item>https://cdn.dribbble.com/users/427857/screenshots/15280261/media/6148d5ec28ad870f429df67e205ff73c.png?compress=1&amp;resize=1000x750</item>
+        <item>https://cdn.dribbble.com/users/1037/screenshots/15277036/media/8e349532be1227f3dae4f9c753dc4d66.png?compress=1&amp;resize=1000x750</item>
+        <item>https://cdn.dribbble.com/users/2408492/screenshots/15280206/media/59abc712eb5c08a297f6052dbaacd044.png?compress=1&amp;resize=1000x750</item>
+        <item>https://cdn.dribbble.com/users/4107199/screenshots/15278963/media/b3dd0b5cec5f192f6d7cd559352e80d9.jpg?compress=1&amp;resize=1000x750</item>
+        <item>https://cdn.dribbble.com/users/1620444/screenshots/15280328/media/426113ffd819517ad0df87884caacafa.png?compress=1&amp;resize=1000x750</item>
+        <item>https://cdn.dribbble.com/users/275590/screenshots/15277341/media/7b753cee53f3c7a377022a65d909d806.jpg?compress=1&amp;resize=1000x750</item>
+        <item>https://cdn.dribbble.com/users/944871/screenshots/15280187/media/d59a4067901ff6fbdef6b146d46994eb.png?compress=1&amp;resize=1000x750</item>
+        <item>https://cdn.dribbble.com/users/1200499/screenshots/15279989/dr-6.jpg?compress=1&amp;resize=800x600</item>
+        <item>https://cdn.dribbble.com/users/1034014/screenshots/15273754/media/e17f03732ae512425e8b073573c820ea.png?compress=1&amp;resize=1000x750</item>
+        <item>https://cdn.dribbble.com/users/3467254/screenshots/15278242/media/03e61830ccbf1826f40052a98d650572.jpg?compress=1&amp;resize=1000x750</item>
     </string-array>
 
 </resources>

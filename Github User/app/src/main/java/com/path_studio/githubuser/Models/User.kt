@@ -13,19 +13,22 @@ data class User (
     var link: String?,
     var followers: Int,
     var following: Int,
-    var avatar: String?
+    var avatar: String?,
+    var background: String?
 ): Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readInt(),
-        parcel.readInt(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readInt(),
-        parcel.readInt(),
-        parcel.readString()
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readInt(),
+            parcel.readInt(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readInt(),
+            parcel.readInt(),
+            parcel.readString(),
+            parcel.readString()
+
     ) {
     }
 
@@ -40,6 +43,7 @@ data class User (
         parcel.writeInt(followers)
         parcel.writeInt(following)
         parcel.writeString(avatar)
+        parcel.writeString(background)
     }
 
     override fun describeContents(): Int {
