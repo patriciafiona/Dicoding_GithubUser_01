@@ -109,4 +109,30 @@ object UserData {
         }
         return selectedUsers
     }
+
+    fun getDataFromName(resources: Resources, appName: String): ArrayList<User>{
+        dataSource(resources)
+
+        val selectedUsers = ArrayList<User>()
+        for (position in dataName.indices) {
+            if(dataName[position].contains(appName, true)) {
+                val user = User(
+                    dataUsername[position],
+                    dataName[position],
+                    dataEmail[position],
+                    dataLocation[position],
+                    dataRepository[position].toInt(),
+                    dataStarred[position].toInt(),
+                    dataCompany[position],
+                    dataLink[position],
+                    dataFollower[position].toInt(),
+                    dataFollowing[position].toInt(),
+                    dataAvatar[position],
+                    dataBackground[position]
+                )
+                selectedUsers.add(user)
+            }
+        }
+        return selectedUsers
+    }
 }

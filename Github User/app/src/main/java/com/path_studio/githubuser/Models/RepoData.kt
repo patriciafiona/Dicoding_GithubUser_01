@@ -13,7 +13,7 @@ object RepoData {
             "repositories.json"
         )
         if (jsonFileString != null) {
-            Log.i("data", jsonFileString)
+            //Log.i("data", jsonFileString)
         }
 
         val gson = Gson()
