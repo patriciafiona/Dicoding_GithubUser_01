@@ -1,5 +1,6 @@
 package com.path_studio.githubuser.Adapters
 
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +13,7 @@ import com.path_studio.githubuser.Models.Repository
 import com.path_studio.githubuser.R
 import de.hdodenhof.circleimageview.CircleImageView
 
-class ListPopularRepoAdapter (val list: ArrayList<Repository>, val activity: MainActivity, val userAvatar: String) : RecyclerView.Adapter<ListPopularRepoAdapter.ListViewHolder>(){
+class ListPopularRepoAdapter (val list: ArrayList<Repository>, val context: Context, val userAvatar: String) : RecyclerView.Adapter<ListPopularRepoAdapter.ListViewHolder>(){
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
         val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_col_popular_repository, viewGroup, false)
@@ -53,7 +54,7 @@ class ListPopularRepoAdapter (val list: ArrayList<Repository>, val activity: Mai
             else -> holder.dispRepoCategoryIndicator.setImageResource(R.color.grey_600)
         }
 
-        holder.dispRepoAvatar.setImageResource(activity.resources.getIdentifier(userAvatar, "drawable", activity.packageName))
+        holder.dispRepoAvatar.setImageResource(context.resources.getIdentifier(userAvatar, "drawable", context.packageName))
     }
 
     override fun getItemCount(): Int {

@@ -8,6 +8,7 @@ object UserData {
 
     private lateinit var dataUsername: Array<String>
     private lateinit var dataName: Array<String>
+    private lateinit var dataEmail: Array<String>
     private lateinit var dataLocation: Array<String>
     private lateinit var dataRepository: Array<String>
     private lateinit var dataCompany: Array<String>
@@ -21,6 +22,7 @@ object UserData {
     private fun dataSource(resources: Resources){
         dataUsername = resources.getStringArray(R.array.username)
         dataName = resources.getStringArray(R.array.name)
+        dataEmail = resources.getStringArray(R.array.email)
         dataLocation = resources.getStringArray(R.array.location)
         dataRepository = resources.getStringArray(R.array.repository)
         dataCompany = resources.getStringArray(R.array.company)
@@ -40,6 +42,7 @@ object UserData {
             val user = User(
                     dataUsername[position],
                     dataName[position],
+                    dataEmail[position],
                     dataLocation[position],
                     dataRepository[position].toInt(),
                     dataStarred[position].toInt(),
@@ -64,6 +67,33 @@ object UserData {
                 val user = User(
                     dataUsername[position],
                     dataName[position],
+                    dataEmail[position],
+                    dataLocation[position],
+                    dataRepository[position].toInt(),
+                    dataStarred[position].toInt(),
+                    dataCompany[position],
+                    dataLink[position],
+                    dataFollower[position].toInt(),
+                    dataFollowing[position].toInt(),
+                    dataAvatar[position],
+                    dataBackground[position]
+                )
+                selectedUsers.add(user)
+            }
+        }
+        return selectedUsers
+    }
+
+    fun getUserByUsername(resources: Resources, username: String): ArrayList<User>{
+        dataSource(resources)
+
+        val selectedUsers = ArrayList<User>()
+        for (position in dataName.indices) {
+            if(dataUsername[position].equals(username)){
+                val user = User(
+                    dataUsername[position],
+                    dataName[position],
+                    dataEmail[position],
                     dataLocation[position],
                     dataRepository[position].toInt(),
                     dataStarred[position].toInt(),

@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.path_studio.githubuser.Activities.MainActivity
+import com.path_studio.githubuser.Activities.UserDetailActivity
 import com.path_studio.githubuser.Models.User
 import com.path_studio.githubuser.R
 
@@ -29,11 +30,9 @@ class ListUserVerticalAdapter (val list: ArrayList<User>, val activity: MainActi
         holder.disp_item_username.text = users.username
 
         holder.itemView.setOnClickListener {
-            //Toast.makeText(holder.itemView.context, "You Choose: " + listApp.get(holder.adapterPosition).appName, Toast.LENGTH_SHORT).show()
-            //show detail page
-            /*val i = Intent(activity, DetailApp::class.java)
-            i.putExtra("appID", list[holder.adapterPosition].appID)
-            activity.startActivity(i)*/
+            val i = Intent(activity, UserDetailActivity::class.java)
+            i.putExtra("username", users.username)
+            activity.startActivity(i)
         }
     }
 

@@ -7,6 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/discover_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:foreground="?android:attr/selectableItemBackground"
@@ -55,7 +56,7 @@
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:text="@string/temp_username"
-                    android:textColor="@color/purple_100"
+                    android:textColor="@color/purple_300"
                     app:layout_constraintStart_toEndOf="@+id/discover_avatar"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintWidth_percent="0.8" />

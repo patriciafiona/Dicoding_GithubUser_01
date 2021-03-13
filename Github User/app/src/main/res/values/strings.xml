@@ -25,6 +25,9 @@
     <string name="explore">Explore</string>
     <string name="all_users">All Users</string>
     <string name="discover">Discover</string>
+    <string name="follow">Follow</string>
+    <string name="details">Details</string>
+    <string name="myemail_gmail_com">myemail@gmail.com</string>
 
     <!-- Other string resources-->
     <string-array name="username">
@@ -53,6 +56,20 @@
         <item>Hendi Santika</item>
         <item>Sidiq Permana</item>
         <item>Patricia Fiona</item>
+    </string-array>
+
+    <string-array name="email">
+        <item>jakeWharton@gmail.com</item>
+        <item>amitshekhariitbhu@gmail.com</item>
+        <item>romainguy@gmail.com</item>
+        <item>chrisbanes@gmail.com</item>
+        <item>tipsy@gmail.com</item>
+        <item>ravi8x@gmail.com</item>
+        <item>jasoet@gmail.com</item>
+        <item>budioktaviyan@gmail.com</item>
+        <item>hendisantika@gmail.com</item>
+        <item>sidiqpermana@gmail.com</item>
+        <item>patriciafiona3@gmail.com</item>
     </string-array>
 
     <string-array name="location">

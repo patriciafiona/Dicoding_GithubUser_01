@@ -9,10 +9,13 @@ import android.view.animation.AnimationSet
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.path_studio.githubuser.Activities.MainActivity
+import com.path_studio.githubuser.Activities.UserDetailActivity
 import com.path_studio.githubuser.Models.User
 import com.path_studio.githubuser.R
 import de.hdodenhof.circleimageview.CircleImageView
@@ -39,8 +42,10 @@ class ListDiscoverHorizontalAdapter(val list: ArrayList<User>, val activity: Mai
         holder.dispStarred.text = user.starred.toString()
         holder.dispRepositories.text = user.repository.toString()
 
-        holder.itemView.setOnClickListener {
-            //
+        holder.dispContainer.setOnClickListener {
+            val i = Intent(activity, UserDetailActivity::class.java)
+            i.putExtra("username", user.username)
+            activity.startActivity(i)
         }
     }
 
@@ -49,6 +54,7 @@ class ListDiscoverHorizontalAdapter(val list: ArrayList<User>, val activity: Mai
     }
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var dispContainer: CardView = itemView.findViewById(R.id.discover_container)
         var dispBackground: ImageView = itemView.findViewById(R.id.discover_background)
         var dispAvatar: CircleImageView = itemView.findViewById(R.id.discover_avatar)
         var dispUsername: TextView = itemView.findViewById(R.id.discover_username)

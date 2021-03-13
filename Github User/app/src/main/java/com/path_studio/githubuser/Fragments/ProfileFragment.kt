@@ -10,14 +10,17 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.util.Util
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.path_studio.githubuser.Activities.MainActivity
 import com.path_studio.githubuser.Adapters.ListPopularRepoAdapter
+import com.path_studio.githubuser.Models.RepoData
 import com.path_studio.githubuser.Models.Repository
 import com.path_studio.githubuser.Models.User
 import com.path_studio.githubuser.Models.UserData
 import com.path_studio.githubuser.R
+import com.path_studio.githubuser.Utils
 import com.path_studio.githubuser.Utils.getJsonDataFromAsset
 import org.w3c.dom.Text
 
@@ -75,8 +78,8 @@ class ProfileFragment : Fragment() {
         myCompany.text = my_data.company
         myLocation.text = my_data.location
         myLink.text = my_data.link
-        myFollowers.text = my_data.followers.toString()
-        myFollowings.text = my_data.following.toString()
+        myFollowers.text = Utils.convertNumberFormat(my_data.followers)
+        myFollowings.text = Utils.convertNumberFormat(my_data.following)
         myRepository.text = my_data.repository.toString()
         myStarred.text = my_data.starred.toString()
 
@@ -89,7 +92,7 @@ class ProfileFragment : Fragment() {
         val rvPopularRepo: RecyclerView = view.findViewById(R.id.rv_popular_repo)
         rvPopularRepo.setHasFixedSize(true)
 
-        val filterResult: ArrayList<Repository> = ArrayList<Repository>(getRepoList().filter { it.username == MY_USERNAME })
+        val filterResult: ArrayList<Repository> = ArrayList(RepoData.getRepoList(activity as MainActivity).filter { it.username == MY_USERNAME })
         showRecyclerList(rvPopularRepo, filterResult)
     }
 
@@ -97,18 +100,6 @@ class ProfileFragment : Fragment() {
         rvApp.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         val listAppAdapter = ListPopularRepoAdapter(list, activity as MainActivity, MY_AVATAR)
         rvApp.adapter = listAppAdapter
-    }
-
-    private  fun getRepoList(): ArrayList<Repository>{
-        val jsonFileString = getJsonDataFromAsset((activity as MainActivity).applicationContext, "repositories.json")
-        if (jsonFileString != null) {
-            Log.i("data", jsonFileString)
-        }
-
-        val gson = Gson()
-        val listRepositoryType = object : TypeToken<ArrayList<Repository>>() {}.type
-
-        return gson.fromJson(jsonFileString, listRepositoryType)
     }
 
 }
