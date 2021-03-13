@@ -28,6 +28,13 @@
     <string name="follow">Follow</string>
     <string name="details">Details</string>
     <string name="myemail_gmail_com">myemail@gmail.com</string>
+    <string name="contributors">Contributors</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorite_detail">Add favorite repositories for quick access at any time, without having to search</string>
+    <string name="add_repositories">Add Repositories</string>
+    <string name="my_work">My Work</string>
+    <string name="issues">Issues</string>
+    <string name="discussions">Discussions</string>
 
     <!-- Other string resources-->
     <string-array name="username">

@@ -2,9 +2,11 @@ package com.path_studio.githubuser.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationSet
 import android.view.animation.AnimationUtils
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,6 +25,7 @@ class UserDetailActivity : AppCompatActivity() {
     private lateinit var appBgImage: ImageView
     private lateinit var USERNAME: String
     private lateinit var AVATAR: String
+    private val MY_USERNAME: String = "patriciafiona"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,14 @@ class UserDetailActivity : AppCompatActivity() {
 
         //show user repositories
         showRepository()
+
+        //Hide or Show button fullow based on
+        val btnFollow: Button = findViewById(R.id.btn_follow)
+        if(listData[0].username.equals(MY_USERNAME)){
+            btnFollow.visibility = View.GONE
+        }else{
+            btnFollow.visibility = View.VISIBLE
+        }
     }
 
     private fun showData(list: ArrayList<User>){
