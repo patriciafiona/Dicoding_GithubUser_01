@@ -25,16 +25,19 @@ class UserDetailActivity : AppCompatActivity() {
     private lateinit var appBgImage: ImageView
     private lateinit var USERNAME: String
     private lateinit var AVATAR: String
-    private val MY_USERNAME: String = "patriciafiona"
+
+    companion object {
+        const val EXTRA_USER = "extra_user"
+        const val MY_USERNAME = "patriciafiona"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_detail)
 
         //show all data into UI
-        val username: String = intent.getStringExtra("username").toString()
-        val listData = com.path_studio.githubuser.Models.UserData.getUserByUsername(this.resources, username)
-        showData(listData)
+        val data = intent.getParcelableExtra<User>(EXTRA_USER) as User
+        showData(data)
 
         //Change App background Color
         settingAnimatedBackground()
@@ -44,14 +47,14 @@ class UserDetailActivity : AppCompatActivity() {
 
         //Hide or Show button fullow based on
         val btnFollow: Button = findViewById(R.id.btn_follow)
-        if(listData[0].username.equals(MY_USERNAME)){
+        if(data.username.equals(MY_USERNAME)){
             btnFollow.visibility = View.GONE
         }else{
             btnFollow.visibility = View.VISIBLE
         }
     }
 
-    private fun showData(list: ArrayList<User>){
+    private fun showData(user: User){
         appBgImage = findViewById(R.id.detail_user_background_animated)
         val name: TextView = findViewById(R.id.detail_user_name)
         val username: TextView = findViewById(R.id.detail_user_username)
@@ -65,25 +68,25 @@ class UserDetailActivity : AppCompatActivity() {
         val followers: TextView = findViewById(R.id.detail_user_followers)
         val followings: TextView = findViewById(R.id.detail_user_followings)
 
-        name.text = list[0].name
+        name.text = user.name
 
-        USERNAME = list[0].username.toString()
+        USERNAME = user.username.toString()
         username.text = USERNAME
 
-        starred.text = list[0].starred.toString()
-        location.text = list[0].location
-        repositories.text = list[0].repository.toString()
-        company.text = list[0].company
-        email.text = list[0].email
-        link.text = list[0].link
-        followers.text = Utils.convertNumberFormat(list[0].followers)
-        followings.text = Utils.convertNumberFormat(list[0].following)
+        starred.text = user.starred.toString()
+        location.text = user.location
+        repositories.text = user.repository.toString()
+        company.text = user.company
+        email.text = user.email
+        link.text = user.link
+        followers.text = Utils.convertNumberFormat(user.followers)
+        followings.text = Utils.convertNumberFormat(user.following)
 
-        AVATAR = list[0].avatar.toString().replace("res/drawable/", "").replace(".png","") //exp before replace: res/drawable/user7.png
+        AVATAR = user.avatar.toString().replace("res/drawable/", "").replace(".png","") //exp before replace: res/drawable/user7.png
         avatar.setImageResource(this.resources.getIdentifier(AVATAR, "drawable", this.packageName))
 
         Glide.with(this)
-            .load(list[0].background)
+            .load(user.background)
             .apply(RequestOptions().override(800, 800))
             .into(appBgImage)
     }

@@ -44,7 +44,7 @@ class ListDiscoverHorizontalAdapter(val list: ArrayList<User>, val activity: Mai
 
         holder.dispContainer.setOnClickListener {
             val i = Intent(activity, UserDetailActivity::class.java)
-            i.putExtra("username", user.username)
+            i.putExtra(UserDetailActivity.EXTRA_USER, user)
             activity.startActivity(i)
         }
     }

@@ -21,17 +21,17 @@ class ListUserVerticalAdapter (val list: ArrayList<User>, val activity: MainActi
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val users = list[position]
+        val user = list[position]
 
-        val avatarName:String = users.avatar.toString().replace("res/drawable/", "").replace(".png","") //exp before replace: res/drawable/user7.png
+        val avatarName:String = user.avatar.toString().replace("res/drawable/", "").replace(".png","") //exp before replace: res/drawable/user7.png
         holder.disp_item_avatar.setImageResource(activity.resources.getIdentifier(avatarName, "drawable", activity.packageName))
 
-        holder.disp_item_name.text = users.name
-        holder.disp_item_username.text = users.username
+        holder.disp_item_name.text = user.name
+        holder.disp_item_username.text = user.username
 
         holder.itemView.setOnClickListener {
             val i = Intent(activity, UserDetailActivity::class.java)
-            i.putExtra("username", users.username)
+            i.putExtra(UserDetailActivity.EXTRA_USER, user)
             activity.startActivity(i)
         }
     }

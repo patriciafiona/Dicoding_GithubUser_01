@@ -40,7 +40,7 @@ class CustomSuggestionsAdapter(inflater: LayoutInflater?, val activity: MainActi
         holder.itemView.setOnClickListener {
             //show detail page
             val i = Intent(activity, UserDetailActivity::class.java)
-            i.putExtra("username", suggestion.username)
+            i.putExtra(UserDetailActivity.EXTRA_USER, suggestion)
             activity.startActivity(i)
         }
     }
